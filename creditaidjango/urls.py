@@ -21,11 +21,17 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', views.test),
 
-    path('predictor/', views.get_all_predictor),
-    path('predictor/crud/', views.crud_predictor),
-    path('predict/', views.get_prediction),
+    # path('test/', views.test),
+    # path('test/extract/', views.get_extract_v2),
+
+    # path('predictor/', views.get_all_predictor),
+    # path('predictor/crud/', views.crud_predictor),
+    # path('predict/', views.get_prediction),
+
+    path('predicthgbrpickle/', views.predictHGBRPickle),
+    path('predictlasso/', views.predictLasso),
+    path('predictlassoreg/', views.predictLassoReg),
 
     path('ping/', views.ping),
     path('', views.ping),

@@ -1,11 +1,11 @@
 import imp
 from pyexpat import model
 from rest_framework import serializers
-from .models import Predictor
+from .models import Image
 
 
-class PredictorSerializer(serializers.ModelSerializer):
+class ImageSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Predictor
+        model = Image
         fields = ['id', 'user_name', 'created_at',
-                  'updated_at', 'ktppicture', 'selfiepicture']
+                  'updated_at', 'image']
